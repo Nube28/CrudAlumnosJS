@@ -1,9 +1,17 @@
-export default class Alumnos{
-    constructor(nombre, apellidoPaterno, apellidoMaterno, clases){
+export default class Alumno{
+    constructor(id, nombre, apellidoPaterno, apellidoMaterno){
+        this.id = id;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
-        this.clases = clases;
+    }
+
+    getId(){
+        return this.id;
+    }
+
+    setId(id){
+        this.id = id;
     }
 
     getNombre() {
@@ -28,14 +36,5 @@ export default class Alumnos{
 
     setApellidoMaterno(apellidoMaterno){
         this.apellidoMaterno = apellidoMaterno;
-    }
-
-    addClase(clases){
-        this.clases.push(clases);
-    }    
-    
-    removeClase(clases){
-        let pos = this.clases.indexOf(clases);
-        this.clases.splice(pos, 1);
     }
 }
