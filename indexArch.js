@@ -1,5 +1,6 @@
 import Alumno from './Alumno.js'
 import Carrera from './Carrera.js';
+const readline = require('readline');
 
 var alumnosRegistrados;
 var carrerasRegistradas;
@@ -12,10 +13,17 @@ function desplegarMenu(){
         console.log("1. Alumnos.");
         console.log("2. Carrera.");
         console.log("3. Salir del sistema.");
-        let a ;// checar lo q dice y cambiarle el nombre a la variable 
+        let a = readline;// checar lo q dice y cambiarle el nombre a la variable 
         switch(a){
             case 1:
                 console.log("Bienvenido al apartado de Alumnos");
+                break;
+            case 2:
+                console.log("Bienvenido al apartado de Carreras");
+                break;
+            case 3:
+                console.log("Saliendo del sistema...");
+                i = false;
                 break;
         }
     }
